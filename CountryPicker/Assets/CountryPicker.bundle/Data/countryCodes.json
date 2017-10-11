@@ -1,5 +1,10 @@
 [
 {
+"name": "All Countries",
+"dial_code": "+00",
+"code": "FF"
+},
+{
 "name": "Afghanistan",
 "dial_code": "+93",
 "code": "AF"

@@ -75,10 +75,10 @@ class CountryView: NibLoadingView {
     func setup(_ country: Country) {
         DispatchQueue.main.async { [weak self] in
             if let flag = country.flag {
-                self?.flagImageView.layer.borderWidth = 0.5
+                self?.flagImageView.layer.borderWidth = (country.code == "FF") ? 0 : 0.5
                 self?.flagImageView.layer.borderColor = UIColor.darkGray.cgColor
                 self?.flagImageView.layer.cornerRadius = 1
-                self?.flagImageView.layer.masksToBounds = true
+                self?.flagImageView.layer.masksToBounds = (country.code == "FF") ? false : true
                 self?.flagImageView.image = flag
             }
         }
